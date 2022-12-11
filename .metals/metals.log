@@ -1,0 +1,283 @@
+2022.12.01 21:38:11 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/home/Programming/advent-of-code-2022/.metals/lsp.trace.json or /Users/home/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.01 21:38:11 INFO  logging to file /Users/home/Programming/advent-of-code-2022/.metals/metals.log
+2022.12.01 21:38:11 INFO  Started: Metals version 0.11.9 in workspace '/Users/home/Programming/advent-of-code-2022' for client Visual Studio Code 1.73.1.
+2022.12.01 21:38:12 INFO  time: initialize in 0.65s
+2022.12.01 21:38:12 WARN  Build server is not auto-connectable.
+2022.12.01 21:38:12 WARN  no build tool detected in workspace '/Users/home/Programming/advent-of-code-2022'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.12.01 21:38:12 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/hello-world/build.sbt
+2022.12.01 21:38:14 INFO  no build target found for /Users/home/Programming/advent-of-code-2022/hello-world/build.sbt. Using presentation compiler with project's scala-library version: 3.2.0
+Dec 01, 2022 9:38:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2022.12.01 21:38:21 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/hello-world/src/main/scala/Main.scala
+2022.12.01 21:38:24 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/hello-world/src/test/scala/MySuite.scala
+2022.12.01 21:38:43 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/build.sbt
+2022.12.01 21:38:51 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 21:38:54 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/build.sbt
+2022.12.01 21:41:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/day1/CalorieCounting.scala
+2022.12.01 21:41:54 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/day1/CalorieCounting.scala
+Dec 01, 2022 9:42:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+java.util.concurrent.CompletionException: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2152)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3734)
+	at java.base/java.lang.String.substring(String.java:1903)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.getIndentForPos(FlatMapToForComprehensionCodeAction.scala:667)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$4(FlatMapToForComprehensionCodeAction.scala:55)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$3(FlatMapToForComprehensionCodeAction.scala:51)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$2(FlatMapToForComprehensionCodeAction.scala:50)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$1(FlatMapToForComprehensionCodeAction.scala:49)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Dec 01, 2022 9:42:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+java.util.concurrent.CompletionException: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2152)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.StringIndexOutOfBoundsException: begin 25, end 35, length 32
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3734)
+	at java.base/java.lang.String.substring(String.java:1903)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.getIndentForPos(FlatMapToForComprehensionCodeAction.scala:667)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$4(FlatMapToForComprehensionCodeAction.scala:55)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$3(FlatMapToForComprehensionCodeAction.scala:51)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$2(FlatMapToForComprehensionCodeAction.scala:50)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.codeactions.FlatMapToForComprehensionCodeAction.$anonfun$contribute$1(FlatMapToForComprehensionCodeAction.scala:49)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2022.12.01 21:42:07 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 21:42:09 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 21:42:14 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 21:42:16 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 21:42:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/test/scala/MySuite.scala
+Dec 01, 2022 9:42:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 149
+2022.12.01 21:51:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:55:48 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:56:05 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:56:09 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:56:27 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:56:33 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 21:58:49 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:00:19 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:01:18 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+Dec 01, 2022 10:07:37 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1243
+2022.12.01 22:08:58 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:20:08 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:20:38 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:21:36 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:22:57 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:23:10 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:23:24 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:28:17 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:28:55 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:31:39 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:31:57 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:34:36 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.01 22:35:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:35:41 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:35:45 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:35:56 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:45:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:50:50 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 22:52:52 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 23:07:22 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 23:08:56 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.01 23:09:13 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:54:22 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:56:29 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:57:04 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:58:00 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:58:47 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 00:58:57 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:01:06 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:01:29 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:01:48 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:03:26 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:25:13 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 01:25:14 INFO  shutting down Metals
+2022.12.02 21:42:54 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/home/Programming/advent-of-code-2022/.metals/lsp.trace.json or /Users/home/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.02 21:42:54 INFO  logging to file /Users/home/Programming/advent-of-code-2022/.metals/metals.log
+2022.12.02 21:42:54 INFO  Started: Metals version 0.11.9 in workspace '/Users/home/Programming/advent-of-code-2022' for client Visual Studio Code 1.73.1.
+2022.12.02 21:42:55 INFO  time: initialize in 0.66s
+2022.12.02 21:42:56 WARN  Build server is not auto-connectable.
+2022.12.02 21:42:56 WARN  no build tool detected in workspace '/Users/home/Programming/advent-of-code-2022'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.12.02 21:42:56 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 21:43:01 INFO  no build target found for /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.02 21:43:03 INFO  time: code lens generation in 6.24s
+2022.12.02 21:56:39 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/Main.scala
+2022.12.02 21:56:47 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/build.sbt
+2022.12.02 21:58:00 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 21:58:09 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:00:42 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:00:49 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 22:12:30 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Dec 02, 2022 10:46:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2499)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.isForComprehensionOwner$1(PcDocumentHighlightProvider.scala:163)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.collectNames$1(PcDocumentHighlightProvider.scala:178)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.$anonfun$4(PcDocumentHighlightProvider.scala:275)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1619)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1568)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1576)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1574)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1623)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1568)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1554)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1623)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1630)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1627)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1636)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1541)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.highlights(PcDocumentHighlightProvider.scala:276)
+
+2022.12.02 22:46:40 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:47:11 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day1/CalorieCounting.scala
+2022.12.02 22:50:42 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:51:05 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:51:49 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Dec 02, 2022 10:52:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3243
+2022.12.02 22:52:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:56:10 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:57:36 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:57:43 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 22:59:40 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:02:49 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:06:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:06:32 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:06:33 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:06:58 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:08:58 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:10:12 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:12:33 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:12:55 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:13:03 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Exception in thread "pool-3-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+2022.12.02 23:27:25 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Dec 02, 2022 11:27:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5917
+2022.12.02 23:27:58 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:28:07 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:28:49 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:29:03 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Dec 02, 2022 11:30:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 6011
+Exception in thread "pool-3-thread-2" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+Dec 02, 2022 11:38:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7044
+2022.12.02 23:42:21 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:43:29 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.02 23:45:05 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+Dec 02, 2022 11:47:52 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: NoDenotation.owner
+java.lang.AssertionError: NoDenotation.owner
+	at dotty.tools.dotc.core.SymDenotations$NoDenotation$.owner(SymDenotations.scala:2499)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.isForComprehensionOwner$1(PcDocumentHighlightProvider.scala:163)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.collectNames$1(PcDocumentHighlightProvider.scala:178)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.$anonfun$4(PcDocumentHighlightProvider.scala:275)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1623)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1630)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1627)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.fold$1(Trees.scala:1535)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.apply(Trees.scala:1537)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1636)
+	at dotty.tools.dotc.ast.Trees$Instance$TreeAccumulator.foldOver(Trees.scala:1541)
+	at dotty.tools.dotc.ast.Trees$Instance$DeepFolder.apply(Trees.scala:1669)
+	at scala.meta.internal.pc.PcDocumentHighlightProvider$.highlights(PcDocumentHighlightProvider.scala:276)
+
+2022.12.02 23:48:51 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.03 00:08:39 INFO  shutting down Metals
+2022.12.03 01:08:44 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/home/Programming/advent-of-code-2022/.metals/lsp.trace.json or /Users/home/Library/Caches/org.scalameta.metals/lsp.trace.json
+2022.12.03 01:08:44 INFO  logging to file /Users/home/Programming/advent-of-code-2022/.metals/metals.log
+2022.12.03 01:08:44 INFO  Started: Metals version 0.11.9 in workspace '/Users/home/Programming/advent-of-code-2022' for client Visual Studio Code 1.73.1.
+2022.12.03 01:08:45 INFO  time: initialize in 0.7s
+2022.12.03 01:08:45 WARN  Build server is not auto-connectable.
+2022.12.03 01:08:45 WARN  no build tool detected in workspace '/Users/home/Programming/advent-of-code-2022'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2022.12.03 01:08:45 WARN  no build target for: /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala
+2022.12.03 01:08:47 INFO  no build target found for /Users/home/Programming/advent-of-code-2022/advent-of-code/src/main/scala/day2/RockPaperScissors.scala. Using presentation compiler with project's scala-library version: 3.2.0
+2022.12.03 01:08:48 INFO  time: code lens generation in 2.44s
+2022.12.03 01:08:52 INFO  shutting down Metals
