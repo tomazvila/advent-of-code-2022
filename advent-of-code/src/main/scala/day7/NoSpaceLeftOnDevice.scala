@@ -42,15 +42,14 @@ object FSZipper:
             case Nil => zipper
 
     def fsTo(name: String, zipper: FSZipper): FSZipper = zipper match
-        case FSZipper(item, crumbs) =>
-            item match
-                case Directory(folderName, items, _) =>
-                    val (ls, a) = items.span(!nameIs(name, _))
-                    a match
-                        case head :: rs => FSZipper(head, (FSCrumb(folderName, ls, rs)) +: crumbs)
-                        case Nil => throw new Exception(s"We can't go to $name")
-                case _ => throw new Exception("Provided zipper does not have directory as an item inside")
-
+        case FSZipper(item, crumbs) => item match
+            case Directory(folderName, items, _) =>
+                val (ls, a) = items.span(!nameIs(name, _))
+                a match
+                    case head :: rs => FSZipper(head, (FSCrumb(folderName, ls, rs)) +: crumbs)
+                    case Nil => throw new Exception(s"We can't go to $name")
+            case _ => throw new Exception("Provided zipper does not have directory as an item inside")
+ 
 /*
 - / (dir)
   - a (dir)
@@ -116,33 +115,32 @@ object FSZipper:
 
     def countAtMost(zipper: FSZipper, atMost: Int): Int = zipper match
         case FSZipper(item, crumbs) => item match
-            case upper@Directory(_, items, _) =>
-                val (newZipper, _, sum) = items.foldRight[(FSZipper, ListZipper, Int)](zipper, ListZipper(List.empty, items.tail), 0)((item, acc) => {
-                    val (accFsZipper, sum) = item match {
-                        case target@Directory(_, _, _) =>
-                            val zipperForCountAtMost = FSZipper(
-                                target,
-                                FSCrumb(
-                                    upper.name,
-                                    acc._2.ls,
-                                    acc._2.rs
-                                ) +: crumbs
-                            )
-                            val toAdd = if (target.size >= atMost) 0 else target.size
-                            val toAddDirDirs = countAtMost(zipperForCountAtMost, atMost)
-                            val toAdd2 = if (toAddDirDirs >= atMost) 0 else toAddDirDirs
-                            (acc._1, acc._3 + toAdd + toAdd2)
-                        case File(name, fsize) => (acc._1, acc._3)
-                    }
-                    val accLZipper = acc._2.rs match {
-                        case h :: t => ListZipper(acc._2.ls :+ item, t)
-                        case Nil => ListZipper(acc._2.ls :+ item, List.empty)
-                    }
-                    (accFsZipper, accLZipper, sum)
-                })
-                sum
-            case File(_, _) => throw new Exception("Can't calculate directory size for File")
+            case dir@Directory(_, _, _) =>
+                val sum = dir.fsItems.foldRight(0)((item, acc) => item match
+                    case Directory(_, _, _) =>
+                        countAtMost(FSZipper(item, List.empty), atMost) + acc
+                    case File(_, _) => acc
+                )
+                val thisDirRet = if (dir.size <= atMost) dir.size else 0
+                sum + thisDirRet
+            case File(_, _) => 0
 
+    def findSmallestDeletableSize(zipper: FSZipper, minToDel: Int): Int = zipper match
+        case FSZipper(item, crumbs) => item match
+            case dir@Directory(_, _, _) =>
+                dir.fsItems.foldRight(dir.size)((item, acc) => item match
+                    case Directory(_, _, size) =>
+                        val best = findSmallestDeletableSize(FSZipper(item, List.empty), minToDel)
+                        if (best < minToDel)
+                            acc
+                        else if ((best - minToDel) < (acc - minToDel))
+                            best
+                        else
+                            acc
+                    case File(_, _) => acc
+                )
+            case File(_, _) => throw new Exception("Can't calculate smalest deletable size for File")
+    
 trait FSItem:
     val size: Int
 case class File(name: String, size: Int = 0) extends Command with FSItem
@@ -201,5 +199,9 @@ def getData: Vector[String] =
     val res = parser.parse(data)
     val root = FSZipper.goTop(res)
     val withSizes = FSZipper.setDirectoriesSizes(root)
-    val solution = FSZipper.countAtMost(withSizes, 100000)
+    val solution1 = FSZipper.countAtMost(withSizes, 100000)
+    val freeSpace = 70000000 - withSizes.item.size
+    val targetFree = 30000000
+    val minimumToDelete = targetFree - freeSpace // 208860
+    val best = FSZipper.findSmallestDeletableSize(withSizes, minimumToDelete)
     println("end of program")
